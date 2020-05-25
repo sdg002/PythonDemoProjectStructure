@@ -44,7 +44,7 @@ class CircleModel(object):
     #Returns a list of points
     #
     @classmethod
-    def generate_points_from_circle(model):
+    def generate_points_from_circle(cls,model):
         angleStart=0
         angleEnd=2*3.1415
         num=100
@@ -55,6 +55,6 @@ class CircleModel(object):
             theta=angles[idx]
             x=radius * math.cos(theta)  +model.X
             y=radius * math.sin(theta)  +model.Y
-            pt_new=pmodel.Point(x,y)
+            pt_new=Point(x,y)
             lst_points.append(pt_new)
         return lst_points
