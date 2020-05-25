@@ -104,3 +104,11 @@ The Tests.csproj was configured as follows
 ```
 <SearchPath>..\</SearchPath>
 ```
+
+# Very careful about classmethod and staticmethod attribute
+I had to re-write 2 of the methods of CircleModel using @classmethod approach
+
+Attention! The first parameter of a classmethod should be 'cls' - which is a Type of that class (not an instance)
+
+## @classmethods behave like static methods but attached to a class
+## @staticmethods behave like pure static methods
